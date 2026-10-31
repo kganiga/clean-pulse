@@ -1,0 +1,6 @@
+{
+  "name": "CleanPulse — Android Storage Optimizer",
+  "description": "Production-grade native Android storage utility built with Jetpack Compose, Material 3, MVVM, WorkManager, chunked SHA-256 duplicate detection, and privacy-first safe cleanup.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

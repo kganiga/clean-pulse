@@ -1,0 +1,28 @@
+# Web prototype
+node_modules/
+dist/
+.env
+.env.local
+
+# Android / Gradle
+android/.gradle/
+android/.kotlin/
+android/build/
+android/app/build/
+android/local.properties
+android/.idea/
+*.iml
+.DS_Store
+captures/
+
+# Signing keys and secrets
+android/keystore/
+android/keystore.properties
+*.jks
+*.keystore
+
+# Local preview artifacts
+android/icon-mask-preview.png
+
+# IDE
+.idea/

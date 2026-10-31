@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CleanPulse</string>
+    <string name="channel_storage_alerts">Storage maintenance alerts</string>
+    <string name="channel_storage_alerts_desc">Results of scheduled storage maintenance</string>
+</resources>
