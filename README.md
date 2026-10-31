@@ -3,7 +3,7 @@
   <h1>CleanPulse</h1>
   <p><em>smart. fresh. lived.</em></p>
   <p>An honest, offline storage cleaner for Android, built with Jetpack Compose.</p>
-  <p><a href="release/CleanPulse-1.0.0.apk"><strong>Download the APK (v1.0.0)</strong></a></p>
+  <p><a href="release/CleanPulse-1.0.1.apk"><strong>Download the APK (v1.0.1)</strong></a></p>
 </div>
 
 ---
@@ -29,7 +29,7 @@ Scan results are saved, so they survive the app being closed or updated.
 
 ## Download and install
 
-1. Download [`release/CleanPulse-1.0.0.apk`](release/CleanPulse-1.0.0.apk) on your phone.
+1. Download [`release/CleanPulse-1.0.1.apk`](release/CleanPulse-1.0.1.apk) on your phone.
 2. Open it and allow installing from that source when Android asks.
 3. On first launch, turn on **All files access** for CleanPulse.
 

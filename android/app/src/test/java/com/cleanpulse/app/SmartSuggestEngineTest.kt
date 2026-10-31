@@ -25,7 +25,6 @@ class SmartSuggestEngineTest {
             lastAccessedMs = now - TimeUnit.DAYS.toMillis(20),
             flagReason = "Recent file",
             isSafeToDelete = false,
-            requiresSafPrompt = true,
             selected = false
         )
 
@@ -47,7 +46,6 @@ class SmartSuggestEngineTest {
             lastAccessedMs = now - TimeUnit.DAYS.toMillis(115),
             flagReason = "Old document",
             isSafeToDelete = false,
-            requiresSafPrompt = true,
             selected = false
         )
 
@@ -71,7 +69,6 @@ class SmartSuggestEngineTest {
             lastAccessedMs = now - TimeUnit.DAYS.toMillis(98),
             flagReason = "Old APK",
             isSafeToDelete = true,
-            requiresSafPrompt = true,
             selected = true
         )
 

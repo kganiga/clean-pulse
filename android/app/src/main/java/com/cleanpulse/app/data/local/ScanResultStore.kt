@@ -73,7 +73,6 @@ class ScanResultStore(context: Context) {
                     duplicateGroupId = o.optString("duplicateGroupId").takeUnless { o.isNull("duplicateGroupId") },
                     isOriginal = o.getBoolean("isOriginal"),
                     isSafeToDelete = o.getBoolean("isSafeToDelete"),
-                    requiresSafPrompt = false,
                     selected = o.getBoolean("selected")
                 )
             }

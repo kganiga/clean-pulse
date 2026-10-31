@@ -27,12 +27,9 @@ data class AutoCleanSettings(
 
 data class EnabledCategories(
     val appCache: Boolean = true,
-    val tmpFiles: Boolean = true,
     val tempFiles: Boolean = true,
     val emptyDirs: Boolean = true,
-    val apks: Boolean = false,
-    val oldDownloads: Boolean = false,
-    val duplicates: Boolean = false
+    val apks: Boolean = false
 )
 
 class SettingsDataStore(private val context: Context) {
@@ -46,7 +43,6 @@ class SettingsDataStore(private val context: Context) {
         val REQ_BATTERY_NOT_LOW = booleanPreferencesKey("req_battery_not_low")
         val REQ_DEVICE_IDLE = booleanPreferencesKey("req_device_idle")
         val CAT_APP_CACHE = booleanPreferencesKey("cat_app_cache")
-        val CAT_TMP_FILES = booleanPreferencesKey("cat_tmp_files")
         val CAT_TEMP_FILES = booleanPreferencesKey("cat_temp_files")
         val CAT_EMPTY_DIRS = booleanPreferencesKey("cat_empty_dirs")
         val CAT_APKS = booleanPreferencesKey("cat_apks")
@@ -70,7 +66,6 @@ class SettingsDataStore(private val context: Context) {
             requireDeviceIdle = prefs[Keys.REQ_DEVICE_IDLE] ?: true,
             categories = EnabledCategories(
                 appCache = prefs[Keys.CAT_APP_CACHE] ?: true,
-                tmpFiles = prefs[Keys.CAT_TMP_FILES] ?: true,
                 tempFiles = prefs[Keys.CAT_TEMP_FILES] ?: true,
                 emptyDirs = prefs[Keys.CAT_EMPTY_DIRS] ?: true,
                 apks = prefs[Keys.CAT_APKS] ?: false
@@ -88,7 +83,6 @@ class SettingsDataStore(private val context: Context) {
             prefs[Keys.REQ_BATTERY_NOT_LOW] = settings.requireBatteryNotLow
             prefs[Keys.REQ_DEVICE_IDLE] = settings.requireDeviceIdle
             prefs[Keys.CAT_APP_CACHE] = settings.categories.appCache
-            prefs[Keys.CAT_TMP_FILES] = settings.categories.tmpFiles
             prefs[Keys.CAT_TEMP_FILES] = settings.categories.tempFiles
             prefs[Keys.CAT_EMPTY_DIRS] = settings.categories.emptyDirs
             prefs[Keys.CAT_APKS] = settings.categories.apks

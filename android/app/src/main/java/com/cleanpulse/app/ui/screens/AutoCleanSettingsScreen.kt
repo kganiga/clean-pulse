@@ -15,6 +15,8 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.setValue
+import androidx.compose.runtime.getValue
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.width
@@ -27,10 +29,8 @@ import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Slider
 import androidx.compose.material3.TopAppBarDefaults
-import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.vector.ImageVector
 import com.cleanpulse.app.ui.theme.Emerald
@@ -104,7 +104,7 @@ fun AutoCleanSettingsScreen(
                         onUpdate { it.copy(categories = it.categories.copy(appCache = on)) }
                     }
                     ToggleRow("Temporary files", ".tmp, partial downloads, gallery trash", c.tempFiles) { on ->
-                        onUpdate { it.copy(categories = it.categories.copy(tempFiles = on, tmpFiles = on)) }
+                        onUpdate { it.copy(categories = it.categories.copy(tempFiles = on)) }
                     }
                     ToggleRow("Empty folders", "Folders with nothing in them", c.emptyDirs) { on ->
                         onUpdate { it.copy(categories = it.categories.copy(emptyDirs = on)) }

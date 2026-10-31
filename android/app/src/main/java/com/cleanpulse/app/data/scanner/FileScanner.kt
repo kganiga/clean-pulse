@@ -61,7 +61,6 @@ class FileScanner(private val context: Context) {
                 mimeType = "application/octet-stream",
                 lastModified = now,
                 flagReason = "Temporary data this app created. Rebuilt automatically when needed.",
-                requiresSafPrompt = false,
                 selected = true
             )
         }
@@ -207,7 +206,6 @@ class FileScanner(private val context: Context) {
         lastModified = file.lastModified(),
         flagReason = reason,
         isSafeToDelete = isSafeToDelete,
-        requiresSafPrompt = false,
         selected = selected
     )
 

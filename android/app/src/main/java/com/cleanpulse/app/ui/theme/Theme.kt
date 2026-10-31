@@ -3,7 +3,6 @@ package com.cleanpulse.app.ui.theme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 
 val Emerald = Color(0xFF10B981)
@@ -12,8 +11,6 @@ val Amber = Color(0xFFF59E0B)
 val Rose = Color(0xFFF43F5E)
 val Slate400 = Color(0xFF94A3B8)
 val Slate500 = Color(0xFF64748B)
-
-val PulseGradient = Brush.linearGradient(listOf(Cyan, Emerald))
 
 // The brand artwork is dark, so the app always uses the dark scheme.
 private val CleanPulseColors = darkColorScheme(

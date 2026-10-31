@@ -1,10 +1,7 @@
 package com.cleanpulse.app.data.cleanup
 
 import android.content.Context
-import android.content.Intent
 import android.media.MediaScannerConnection
-import android.net.Uri
-import android.provider.Settings
 import com.cleanpulse.app.data.model.FileCategory
 import com.cleanpulse.app.data.model.StorageCandidate
 import kotlinx.coroutines.Dispatchers
@@ -26,7 +23,6 @@ class SafeCleanupEngine(private val context: Context) {
      * Categorized:
      * A. App-owned cache: safely deleted directly.
      * B. User-approved files: deleted via File.delete (needs All files access).
-     * C. Other apps' cache: redirects to Android App Settings with explanation.
      */
     suspend fun executeCleanup(
         candidatesToDelete: List<StorageCandidate>,
@@ -136,17 +132,6 @@ class SafeCleanupEngine(private val context: Context) {
             reclaimed
         } catch (e: Exception) {
             0L
-        }
-    }
-
-    /**
-     * Intent helper: Creates intent for user to open system Storage Settings or App Info.
-     * Android does not allow 3rd party apps to purge other apps' private cache directories.
-     */
-    fun createOpenAppStorageSettingsIntent(packageName: String): Intent {
-        return Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).apply {
-            data = Uri.fromParts("package", packageName, null)
-            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         }
     }
 }
